@@ -1,0 +1,102 @@
+<html>
+<head>
+<meta http-equiv="Content-language" content="en">
+<title>Sketchpad</title>
+
+<script src="sketchpad.js"> </script>
+
+<style>
+/* Some CSS styling */
+#sketchpadapp {
+    /* Prevent nearby text being highlighted when accidentally dragging mouse outside confines of the canvas */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.leftside {
+    float:left;
+    width:220px;
+    height:285px;
+    background-color:#def;
+    padding:10px;
+    border-radius:4px;
+}
+.bottom {
+    float:left;
+    padding:10px;
+}
+#sketchpad {
+    float:left;
+    height:550px;
+    width:460px;
+    border:2px solid #888;
+    border-radius:4px;
+    position:relative; /* Necessary for correct mouse co-ords in Firefox */
+}
+#clearbutton {
+    font-size: 15px;
+    padding: 10px;
+    margin-left: 60px;
+    margin-right: 20px;
+    -webkit-appearance: none;
+    background: #eee;
+    border: 1px solid #888;
+}
+.topbar {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom:5px;
+    font-size: 16px;
+    text-align: left;
+}
+td {
+   padding-left: 10px;
+   padding-right: 10px;
+   width: 36px;
+   height: 30px;
+   text-align: center;
+   font-size: 20px;
+}
+</style>
+<script src="topbar.js"></script>   
+</head>
+<body onload="init(); startTime();">
+    <div id="txt"; class="topbar"></div>
+    <div id="sketchpadapp">
+        <div class="rightside">
+            <canvas id="sketchpad" height="550" width="460">
+            </canvas>
+        </div>
+    </div>
+    <div style="float: left; padding-bottom: 5px;">
+    <h4 id="color">Choose a color and size:</h4>
+    <table style="padding-bottom:10px; cursor: pointer;">
+        <tr>
+        <td style="background-color: red;" id="red"></td>
+        <td style="background-color: orange;" id="orange"></td>
+        <td style="background-color: yellow;" id="yellow"></td>
+        <td style="background-color: green;" id="green"></td>
+        <td style="background-color: blue;" id="blue"></td>
+        <td style="background-color: indigo;" id="indigo"></td>
+        <td style="background-color: violet;" id="violet"></td>
+        <td style="background-color: black;" id="black"></td>
+        </tr>
+    </table>
+    <table style="margin-left: 70px; cursor: pointer;">
+        <tr>
+        <td id="eraser">Eraser</td>   
+        <td id="small">Small</td>
+        <td id="medium">Medium</td>
+        <td id="large">Large</td>
+        </tr>
+    </table>
+    </div>
+    <div class="bottom">
+    <input type="submit" value="Clear Sketchpad" id="clearbutton" onclick="clearCanvas(canvas,ctx);">
+    <input type="submit" value="Go Home" id="clearbutton" onclick="location.href='index.html';">
+    </div>
+</body>
+</html>

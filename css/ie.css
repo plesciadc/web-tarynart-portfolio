@@ -1,0 +1,73 @@
+
+
+.class { behavior:url(js/PIE.htc); position:absolute;}
+
+
+
+body {
+
+	min-width: 940px;
+
+}
+
+#form .invalid .error-message, #form .empty .empty-message {
+
+	opacity: 1;
+
+	display: block;
+
+}
+
+#form .error-message, #form .empty-message {
+
+	display: none;
+
+}
+
+#camera_wrap .camera_caption{
+
+	background: #707070
+
+}
+
+
+
+.lbHover{
+
+	color: #000;
+
+	font-size: 50px;
+
+	line-height: 50px;
+
+	position: absolute;
+
+	top: 30%;
+
+	left: 44%;
+
+	filter: alpha(opacity=0);
+
+}
+
+.thumbs div:hover .lbHover{
+
+	filter: alpha(opacity=80);
+
+}
+
+
+
+.social li{
+
+	letter-spacing: normal;
+
+}
+
+
+
+.camera_prev, .camera_next{
+
+	background-color: #707070;
+
+}
